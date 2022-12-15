@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'templates')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../static/style.css" th:href="@{/style.css}"/>
+
+</head>
+<body>
+
+<h2 class="analytics-main" style="text-align: center">Search Results</h2>
+
+<hr class="light">
+
+<div class="container-fluid padding">
+    <div class="row padding">
+        <div class="col-12">
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Serving Unit</th>
+                    <th scope="col">Serving Quantity</th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="item : ${baseProductList}">
+                    <td th:text="${item.food_name}"></td>
+                    <td th:text="${item.serving_unit}"></td>
+                    <td th:text="${item.serving_qty}"></td>
+                    <td><a href="#" th:href="@{'/logger/product_query/detailed_query/'+ ${item.food_name}}" class="btn btn-secondary" role="button">View Details</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
