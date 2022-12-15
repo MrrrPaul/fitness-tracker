@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'templates')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Information</title>
+
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../static/style.css" th:href="@{/style.css}"/>
+
+</head>
+<body>
+
+<h2 class="analytics-main" style="text-align: center">Nutritional Values</h2>
+
+<hr class="light">
+
+<div class="container-fluid padding">
+    <div class="row padding">
+        <div class="col-12">
+            <table class="table table-borderless">
+                <thead class="thead-light">
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Serving Quantity</th>
+                    <th scope="col">Serving Unit</th>
+                    <th scope="col">Serving Weight (g)</th>
+                    <th scope="col">Calories (kcal)</th>
+                    <th scope="col">Total Fat (g)</th>
+                    <th scope="col">Sodium (mg)</th>
+                    <th scope="col">Total Carbs (g)</th>
+                    <th scope="col">Dietary Fiber (g)</th>
+                    <th scope="col">Sugars (g)</th>
+                    <th scope="col">Protein (g)</th>
+                    <th scope="col">Potassium (mg)</th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="item : ${detailedProductInfo}">
+                    <td th:text="${item.foodName}">Mark</td>
+                    <td th:text="${item.servingQuantity}">Otto</td>
+                    <td th:text="${item.servingUnit}">Otto</td>
+                    <td th:text="${item.servingWeightGrams}">Otto</td>
+                    <td th:text="${item.calories}"></td>
+                    <td th:text="${item.totalFat}"></td>
+                    <td th:text="${item.sodium}"></td>
+                    <td th:text="${item.totalCarbs}"></td>
+                    <td th:text="${item.dietaryFiber}"></td>
+                    <td th:text="${item.sugars}"></td>
+                    <td th:text="${item.protein}"></td>
+                    <td th:text="${item.potassium}"></td>
+                    <td><a href="#" th:href="@{'/add_food'}" class="btn btn-secondary" role="button">Add Food</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
