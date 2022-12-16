@@ -84,5 +84,7 @@ public class ProfileController {
         userRepository.save(user).block();
 
         return "redirect:/profile";
+
+
     }
 }

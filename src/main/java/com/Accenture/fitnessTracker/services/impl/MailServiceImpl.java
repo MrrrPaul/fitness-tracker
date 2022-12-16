@@ -4,7 +4,6 @@ import com.Accenture.fitnessTracker.model.PasswordResetToken;
 import com.Accenture.fitnessTracker.repositories.UserRepository;
 import com.Accenture.fitnessTracker.services.MailService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.context.annotation.Bean;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
@@ -28,6 +27,7 @@ public class MailServiceImpl implements MailService {
 
         var mailMessage = new SimpleMailMessage();
 
+        mailMessage.setFrom("remeikucis1@gmail.com");
         mailMessage.setTo(userRepository.findUserByEmail(email).block().getEmail());
         mailMessage.setSubject("Reset Password for FoodLogger");
         mailMessage.setText("Hello, "+
