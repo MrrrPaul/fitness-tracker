@@ -9,5 +9,4 @@ import reactor.core.publisher.Mono;
 public interface PasswordTokenRepository extends ReactiveCrudRepository<PasswordResetToken, String> {
 
     Mono<PasswordResetToken> findByToken(String token);
-
 }

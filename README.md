@@ -41,10 +41,10 @@ TBD
 
 ## Authors
 
-* **Arshia Shaik** - *Initial work* - [arfatima](https://github.com/arfatima)
-* **Paulius Remeika** - *Initial work* - [PauliusRemeika](https://github.com/PauliusRemeika)
-* **Charan G** - *Initial work* - [Charan167](https://github.com/Charan167)
-* **Ifeanyi Ikesee** - *Initial work* - [anyiones](https://github.com/anyiones)
+* **Arshia** - *Initial work* - [arfatima](https://github.com/arfatima)
+* **Paulius** - *Initial work* - [MrrrPaul](https://github.com/MrrrPaul)
+* **Charan** - *Initial work* - [Charan167](https://github.com/Charan167)
+* **Ifeanyi** - *Initial work* - [anyiones](https://github.com/anyiones)
 
 ## License
 

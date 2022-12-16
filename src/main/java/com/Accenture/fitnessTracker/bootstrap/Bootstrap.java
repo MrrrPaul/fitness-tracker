@@ -25,12 +25,11 @@ public class Bootstrap implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+
         productRepository.deleteAll().block();
         categoryRepository.deleteAll().block();
-        //userRepository.deleteAll().block();
 
         productRepository.save(Product.builder().name("products").calories(250.0).description("A Great Product").build()).block();
-
         categoryRepository.save(Category.builder().name("Category1").description("Spicy").build()).block();
 
     }
